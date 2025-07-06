@@ -39,8 +39,8 @@ npm run dev
 
 Visit: http://localhost:3000
 
-
-
+## 🚀 Live Site
+Deployed at: [https://ir-web.vercel.app](https://ir-web.vercel.app)
 
 
 ir-web/
