@@ -59,13 +59,35 @@ ir-web/
 ├── package.json              # Scripts & dependencies
 └── README.md
 
+--------------------------------------------------------------------------
+
+Layouts & Styling
+This project uses the Next.js App Router, which supports both global and per-page layouts.
+
+🧱 Global Layout
+src/app/layout.js: Defines the global layout for all pages (like navigation, shared header/footer).
+
+src/app/globals.css: Base global styles applied across the app.
+
+🧩 Page-Specific Layouts
+Each route (e.g. /about, /contact) can have its own layout and styles:
+
+pgsql
+Copy
+Edit
+src/app/
+├── layout.js         ← global layout (nav + wrapper)
+├── globals.css       ← base CSS for the whole site
+├── about/
+│   ├── layout.js     ← optional layout for /about
+│   ├── about.css     ← scoped styles for /about
+│   └── page.js
 
 
-
+-------------------------------------------------------------------
 
 ➕ Adding a New Page
 To add a new section (e.g., /team):
-
 
 mkdir src/app/team
 touch src/app/team/page.js
@@ -76,15 +98,3 @@ export default function TeamPage() {
   return <h1>Our Team</h1>;
 }
 Now accessible at: http://localhost:3000/team
-
-
-
-
-🚀 Deployment (Later)
-For now, run locally.
-
-When ready to deploy:
-
-Use Vercel for one-click deployment (best for Next.js)
-
-OR GitHub Pages (manual setup)
