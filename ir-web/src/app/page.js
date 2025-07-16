@@ -1,8 +1,11 @@
+'use client';
+import dynamic from 'next/dynamic';
+const GlobeDemo = dynamic(() => import('../../components/ui/globe-demo').then(m => m.GlobeDemo), { ssr: false });
+
 export default function HomePage() {
   return (
     <div>
-      <h1>Welcome to IR Wing Website</h1>
-      <p>This is the homepage.</p>
+      <GlobeDemo />
     </div>
   );
 }
