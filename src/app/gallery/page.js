@@ -39,7 +39,7 @@ export default function Gallery() {
 
   return (
     <div className={styles.galleryContainer}>
-      <h1 className={styles.heading}>Gallery</h1>
+      <h1 className={styles.heading}>Gallery edited</h1>
 
       {Object.entries(categorizedImages).map(([category, images]) => (
         <div key={category}>
