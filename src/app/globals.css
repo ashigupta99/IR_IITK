@@ -1,0 +1,121 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+#__next, main {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Header */
+.site-header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  pointer-events: none;
+  padding-top: 1vw;
+}
+
+.main-nav {
+  display: flex;
+  position:fixed;
+  gap: 1.5rem;
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.10), 0 1.5px 6px rgba(0,0,0,0.08);
+  padding: 0.75rem 2.5rem;
+  align-items: center;
+  pointer-events: auto;
+  border: 1px solid #e5e7eb;
+}
+
+.main-nav a {
+  color: #1e293b;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.08rem;
+  transition: color 0.18s;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+}
+
+.main-nav a:hover {
+  background: #e0e7ef;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    padding-top: 3vw;
+    width: 100vw;
+    height: 45px;
+  }
+  .main-nav {
+    padding: 0.25rem 0.5rem;
+    gap: 0.3rem;
+    font-size: 0.3rem;
+    flex-wrap: wrap; 
+    justify-content: center;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+  .main-nav a {
+    font-size: 0.98rem;
+    padding: 0.25rem 0.4rem;
+    min-width: 60px;
+    text-align: center;
+    word-break: break-word;
+  }
+}
+
+/* Globe area */
+.main-content {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #000;
+}
+
+/* Globe canvas */
+canvas, .globe-canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  display: block;
+  pointer-events: none;
+}
+
+/* Overlay text */
+.globe-overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: clamp(1.5rem, 6vw, 2.7rem);
+  font-weight: bold;
+  pointer-events: none;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  width: 90vw;
+  max-width: 600px;
+  line-height: 1.1;
+  text-align: center;
+}
