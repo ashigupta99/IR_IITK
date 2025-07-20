@@ -6,6 +6,7 @@ export default function HomePage() {
   return (
     <div>
       <GlobeDemo />
+    <div>Hello, Is it visible?</div>
     </div>
   );
 }
