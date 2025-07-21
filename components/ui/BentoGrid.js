@@ -1,7 +1,7 @@
 // BentoGrid.js
 import React from "react";
 import { motion } from "framer-motion";
-import "./BentoGrid.css"; // Import your custom styles
+import "./BentoGrid.css"; 
 
 export function BentoGrid({ className, children }) {
   return <div className={`bento-grid-wrapper ${className || ""}`}>{children}</div>;
