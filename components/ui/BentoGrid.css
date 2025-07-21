@@ -1,0 +1,69 @@
+.bento-grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .bento-grid-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .bento-grid-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.bento-grid-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 16rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: #efe9e9;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.bento-grid-item:hover {
+  box-shadow: 0 12px 32px rgba(255, 255, 255, 0.15);
+}
+
+.bento-item-header img {
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.bento-item-icon svg {
+  width: 16px;
+  height: 16px;
+  color: #999;
+  transition: opacity 0.3s ease;
+}
+
+.bento-grid-item:hover .bento-item-icon svg {
+  opacity: 0.7;
+}
+
+.bento-item-title {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 0.5rem;
+}
+
+.bento-item-description {
+  font-size: 0.875rem;
+  font-family: sans-serif;
+  color: #eeeeee;
+  margin-top: 0.25rem;
+}
