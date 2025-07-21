@@ -4,9 +4,9 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import { HeroHighlight, Highlight } from "../../component/HeroHighlight";
+import { HeroHighlight, Highlight } from "../../component/ui/HeroHighlight";
 import { motion } from "framer-motion";
-import{ BentoGridSection }from "../../component/BentoGridSection";
+import{ BentoGridSection }from "../../component/ui/BentoGridSection";
 import React from "react";
 // import BentoGridSection from "../../component/BentoGridSection";
 
