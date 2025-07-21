@@ -1,14 +1,6 @@
 import './globals.css';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'IR Wing',
-  description: 'International Relations Wing at IIT Kanpur.',
-  icons: {
-    icon: '/favicon.ico',
-  },
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
