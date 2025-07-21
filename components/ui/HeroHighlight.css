@@ -1,0 +1,78 @@
+/* HeroHighlight.css */
+.hero-container {
+  position: relative;
+  display: flex;
+  height: 30rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.hero-container.dark {
+  background-color: black;
+}
+
+.pattern-light,
+.pattern-dark,
+.pattern-light-hover,
+.pattern-dark-hover {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.pattern-dark {
+  display: none;
+}
+
+.pattern-light-hover,
+.pattern-dark-hover {
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.hero-container:hover .pattern-light-hover,
+.hero-container:hover .pattern-dark-hover {
+  opacity: 1;
+}
+
+.pattern-dark-hover,
+.pattern-dark {
+  display: none; /* You can toggle dark mode manually */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 20;
+}
+
+/* Highlight text */
+.highlight-text {
+  position: relative;
+  display: inline-block;
+  padding: 0 4px 4px;
+  border-radius: 6px;
+  background-image: linear-gradient(to right, #a5b4fc, #c4b5fd);
+}
+
+/* Optional dark theme override */
+.dark .highlight-text {
+  background-image: linear-gradient(to right, #6366f1, #8b5cf6);
+}
+.highlightText {
+  background: linear-gradient(to right, #a78bfa, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
