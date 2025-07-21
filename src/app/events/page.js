@@ -48,7 +48,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           style={{
-            fontSize: "4.5rem", // increase here as needed
+            fontSize: "4.5rem", 
             fontWeight: "900",
             textAlign: "center",
             color: "#bdb2ff",
