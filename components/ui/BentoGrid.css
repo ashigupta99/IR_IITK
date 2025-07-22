@@ -3,6 +3,7 @@
   grid-template-columns: 1fr;
   gap: 1rem;
   width: 100%;
+   background-color: #000000;
 }
 
 @media (min-width: 768px) {
