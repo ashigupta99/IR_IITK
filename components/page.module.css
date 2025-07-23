@@ -1,0 +1,46 @@
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 5rem 1rem;
+}
+
+.title {
+  font-size: 4.5rem;
+  font-weight: 900;
+  text-align: center;
+  color: #bdb2ff;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  max-width: 600px;
+  text-align: center;
+  color: #000000;
+  font-weight: 500;
+}
+
+.divider {
+  width: 160px;
+  height: 4px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #a78bfa, #7c3aed, #a78bfa);
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.highlightText {
+  background: linear-gradient(to right, #a78bfa, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

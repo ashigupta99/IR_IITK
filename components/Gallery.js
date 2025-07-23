@@ -39,7 +39,7 @@ export default function Gallery() {
 
   return (
     <div className={styles.galleryContainer}>
-      <h1 className={styles.heading}>Gallery edited</h1>
+      <h1 className={styles.heading}>Gallery</h1>
 
       {Object.entries(categorizedImages).map(([category, images]) => (
         <div key={category}>
@@ -80,24 +80,3 @@ export default function Gallery() {
     </div>
   );
 }
-
-// "use client";
-// import styles from "./page_style.module.css";
-
-// export default function TestGallery() {
-//   return (
-//     <div className={styles.galleryContainer}>
-//       <h1 className={styles.heading}>🚀 CSS Test Works!</h1>
-//       <p className={styles.subheading}>This is a test of your CSS module.</p>
-//       <div className={styles.grid}>
-//         <div className={styles.imageCard}>
-//           <img
-//             src="/Images/Image1.jpg"
-//             className={styles.image}
-//             alt="Test Image"
-//           />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
