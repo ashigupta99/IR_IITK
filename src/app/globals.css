@@ -191,10 +191,10 @@ html, body {
 /* 👉 Mobile / Small Screen Styles */
 @media (max-width: 640px) {
   .animated-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
     white-space: normal;
     text-align: center;
-    padding: 0 1rem;
+    padding: 0.1rem;
   }
 
   .center-text {
