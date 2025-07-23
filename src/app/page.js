@@ -72,7 +72,7 @@ export default function HomePage() {
             <div className="center-text">
               <div className="line">
                 <SplitText
-                  text="Greetings from"
+                  text="Greetings from the"
                   className="animated-text"
                   delay={100}
                   duration={0.1}
