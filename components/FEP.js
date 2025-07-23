@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import { HeroHighlight } from "../components/ui/HeroHighlight";
+import { HeroHighlight } from "./ui/HeroHighlight";
 import { motion } from "framer-motion";
-import { BentoGridSection } from "../components/ui/BentoGridSection";
+import { BentoGridSection } from "./ui/BentoGridSection";
 import React from "react";
 
-export default function Events() {
+export default function FEP() {
   return (
     <>
       <HeroHighlight>

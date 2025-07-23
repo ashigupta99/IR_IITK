@@ -7,7 +7,7 @@ import SplitText from '../../components/ui/SplitText';
 import About from '../../components/About';
 import Blogs from '../../components/Blogs';
 import Contact from '../../components/Contact';
-import Events from '../../components/Events';
+import FEP from '../../components/FEP';
 import Gallery from '../../components/Gallery';
 import Resources from '../../components/Resources';
 
@@ -27,10 +27,10 @@ export default function HomePage() {
       <div className={`sidebar ${sidebarOpen ? 'active' : ''}`}>
         <a href="#about" onClick={toggleSidebar}>About</a>
         <a href="#blogs" onClick={toggleSidebar}>Blogs</a>
-        <a href="#contact" onClick={toggleSidebar}>Contact</a>
-        <a href="#events" onClick={toggleSidebar}>Events</a>
-        <a href="#gallery" onClick={toggleSidebar}>Gallery</a>
+        <a href="#FEP" onClick={toggleSidebar}>FEP</a>
         <a href="#resources" onClick={toggleSidebar}>Resources</a>
+        <a href="#gallery" onClick={toggleSidebar}>Gallery</a>
+        <a href="#contact" onClick={toggleSidebar}>Contact</a>
       </div>
 
       {/* Hero Section */}
@@ -59,20 +59,20 @@ export default function HomePage() {
         <Blogs />
       </div>
 
-      <div id="contact" className="content-section">
-        <Contact />
+      <div id="FEP" className="content-section">
+        <FEP />
       </div>
 
-      <div id="events" className="content-section">
-        <Events />
+      <div id="resources" className="content-section">
+        <Resources />
       </div>
 
       <div id="gallery" className="content-section">
         <Gallery />
       </div>
 
-      <div id="resources" className="content-section">
-        <Resources />
+      <div id="contact" className="content-section">
+        <Contact />
       </div>
 
     </>
