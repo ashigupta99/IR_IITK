@@ -14,7 +14,6 @@ html, body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
   background: #fce7bf;
   color: #334155;
-  scroll-behavior: smooth;
 }
 
 /* Sidebar Toggle Button */
@@ -151,6 +150,7 @@ html, body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   text-align: center;
   min-height: 60vh;
+  scroll-margin-top: 49px;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -204,6 +204,7 @@ html, body {
 
   .content-section {
     margin: 2rem 1rem;
+    scroll-margin-top: 30px;
     padding: 1.5rem 1rem;
     min-height: auto; /* allow auto height on sections */
   }
@@ -248,3 +249,41 @@ html, body {
   transform: translateY(0);
 }
 
+
+
+
+/* ✅ Logo Wrapper Container for spacing */
+.logo-wrapper {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* ✅ Logo Row */
+.hero-logos {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ✅ Logo image styles */
+.hero-logos img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* ✅ Hover effect */
+.hero-logos img:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ Smaller logos on small devices */
+@media (max-width: 640px) {
+  .hero-logos img {
+    width: 70px;
+  }
+}

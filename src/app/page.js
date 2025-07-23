@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect } from 'react';
 import SplitText from '../../components/ui/SplitText';
+import Image from 'next/image'
 
 // Event content components
 import About from '../../components/About';
@@ -77,7 +78,7 @@ export default function HomePage() {
                   delay={100}
                   duration={0.1}
                   ease="power3.out"
-                  splitType="chars"
+                  splitType="words"
                   from={{ opacity: 0, y: 30 }}
                   to={{ opacity: 1, y: 0 }}
                 />
@@ -89,12 +90,20 @@ export default function HomePage() {
                   delay={50}
                   duration={0.1}
                   ease="power3.out"
-                  splitType="chars"
+                  splitType="words"
                   from={{ opacity: 0, y: 30 }}
                   to={{ opacity: 1, y: 0 }}
                 />
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* ✅ Logos after Hero */}
+        <div className="logo-wrapper">
+          <div className="hero-logos">
+            <Image src="/logo1.jpg" alt="Logo 1" width={150} height={150} />
+            <Image src="/logo2.jpg" alt="Logo 2" width={150} height={150} />
           </div>
         </div>
 
