@@ -19,7 +19,7 @@ export const HeroHighlight = ({ children, className = "", containerClassName = "
       default:
         "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='16' height='16'%3E%3Ccircle fill='%2340404060' cx='10' cy='10' r='2.5'/%3E%3C/svg%3E\")",
       hover:
-        "url(\"data:image/svg+xml;charset=utf-82340404060,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='16' height='16'%3E%3Ccircle fill='%cac7ff' cx='10' cy='10' r='2.5'/%3E%3C/svg%3E\")",
+        "url(\"data:image/svg+xml;charset=utf-82340404060,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='16' height='16'%3E%3Ccircle fill='%ffd6a5' cx='10' cy='10' r='2.5'/%3E%3C/svg%3E\")",
     },
   };
 
