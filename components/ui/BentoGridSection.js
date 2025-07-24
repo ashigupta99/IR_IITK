@@ -36,7 +36,7 @@ function BentoItem({ item, index }) {
             className="bento-image"
           />
         </div>
-        <div className="bento-icon">{item.icon}</div>
+        // <div className="bento-icon">{item.icon}</div>
         <h3 className="bento-title">{item.title}</h3>
         <p className="bento-description">{item.description}</p>
       </div>
@@ -62,7 +62,7 @@ const items = [
       "Ready to explore research opportunities abroad? Join us for an exclusive online session on Foreign Research Internships and gain insights from IIT Kanpur peers who have secured prestigious internships at top international universities",
     imageSrc: "/images/research_s.jpeg",
     alt: "Research Session",
-    icon: <IconClipboardCopy className="bento-icon-svg" />,
+    // icon: <IconClipboardCopy className="bento-icon-svg" />,
   },
   {
     title: "Surge Info Session",
@@ -70,7 +70,7 @@ const items = [
       "Have you heard about SURGE... approximately eight weeks.",
     imageSrc: "/images/surge.jpeg",
     alt: "SURGE Program",
-    icon: <IconFileBroken className="bento-icon-svg" />,
+    // icon: <IconFileBroken className="bento-icon-svg" />,
   },
   {
     title: "Buddy Program",
@@ -78,7 +78,7 @@ const items = [
       "The Buddy Program pairs incoming international students with volunteers...",
     imageSrc: "/images/buddy.jpg",
     alt: "Buddy Program",
-    icon: <IconSignature className="bento-icon-svg" />,
+    // icon: <IconSignature className="bento-icon-svg" />,
   },
   {
     title: "Foreign Students Orientation",
@@ -86,7 +86,7 @@ const items = [
       "The Foreign Students Orientation in MnC clubs helps international students...",
     imageSrc: "/images/orientation.jpg",
     alt: "Orientation Program",
-    icon: <IconTableColumn className="bento-icon-svg" />,
+    // icon: <IconTableColumn className="bento-icon-svg" />,
   },
   {
     title: "SemEx Sessions",
@@ -94,7 +94,7 @@ const items = [
       "SemEx Sessions ahead of the spring and fall semesters...",
     imageSrc: "/images/exchange.jpg",
     alt: "SemEx Sessions",
-    icon: <IconArrowWaveRightUp className="bento-icon-svg" />,
+    // icon: <IconArrowWaveRightUp className="bento-icon-svg" />,
   },
   {
     title: "Foreign Exposure Program",
@@ -102,7 +102,7 @@ const items = [
       "The Foreign Exposure Program allows undergraduates to gain international exposure...",
     imageSrc: "/images/airplane.jpg",
     alt: "Foreign Exposure",
-    icon: <IconBoxAlignTopLeft className="bento-icon-svg" />,
+    // icon: <IconBoxAlignTopLeft className="bento-icon-svg" />,
   },
   {
     title: "International Programs",
@@ -110,6 +110,6 @@ const items = [
       "Sessions like MITACS, Summer@EPFL, and DAAD-WISE feature speakers...",
     imageSrc: "/images/exchange.jpg",
     alt: "International Programs",
-    icon: <IconBoxAlignRightFilled className="bento-icon-svg" />,
+    // icon: <IconBoxAlignRightFilled className="bento-icon-svg" />,
   },
 ];
