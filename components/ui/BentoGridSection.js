@@ -60,7 +60,7 @@ const items = [
     title: "Intro to foreign Research Internships",
     description:
       "Ready to explore research opportunities abroad? Join us for an exclusive online session on Foreign Research Internships and gain insights from IIT Kanpur peers who have secured prestigious internships at top international universities",
-    imageSrc: "/images/research_s.jpeg",
+    imageSrc: "/Images/researchinterniamge.webp",
     alt: "Research Session",
     // icon: <IconClipboardCopy className="bento-icon-svg" />,
   },
@@ -68,7 +68,7 @@ const items = [
     title: "Surge Info Session",
     description:
       "Have you heard about SURGE... approximately eight weeks.",
-    imageSrc: "/images/surge.jpeg",
+    imageSrc: "/Images/surgeimage.webp",
     alt: "SURGE Program",
     // icon: <IconFileBroken className="bento-icon-svg" />,
   },
@@ -76,7 +76,7 @@ const items = [
     title: "Buddy Program",
     description:
       "The Buddy Program pairs incoming international students with volunteers...",
-    imageSrc: "/images/buddy.jpg",
+    imageSrc: "/Images/imagebuddyprogram.jpeg",
     alt: "Buddy Program",
     // icon: <IconSignature className="bento-icon-svg" />,
   },
