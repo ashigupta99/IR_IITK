@@ -3,7 +3,7 @@
   grid-template-columns: 1fr;
   gap: 1rem;
   width: 100%;
-   background-color: #000000;
+   background-color: white;
 }
 
 @media (min-width: 768px) {
@@ -26,7 +26,7 @@
   min-height: 16rem;
   padding: 1.5rem;
   border-radius: 12px;
-  background-color:  #111111;
+  background-color:  white;
   box-shadow: 0 8px 24px rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: box-shadow 0.3s ease;
@@ -43,12 +43,12 @@
   object-fit: cover;
 }
 
-.bento-item-icon svg {
+/* .bento-item-icon svg {
   width: 16px;
   height: 16px;
   color: #999;
   transition: opacity 0.3s ease;
-}
+} */
 
 .bento-grid-item:hover .bento-item-icon svg {
   opacity: 0.7;
@@ -58,13 +58,13 @@
   font-family: sans-serif;
   font-weight: bold;
   font-size: 1rem;
-  color: #fff;
+  color: black;
   margin-top: 0.5rem;
 }
 
 .bento-item-description {
   font-size: 0.875rem;
   font-family: sans-serif;
-  color: #eeeeee;
+  color: black;
   margin-top: 0.25rem;
 }
