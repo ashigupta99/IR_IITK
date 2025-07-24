@@ -19,18 +19,20 @@ export default function FEP() {
             className={styles.title}
           >
             <span className={styles.highlightText}>
-             Highlighted events hosted by the International Research Wing at IIT Kanpur
+              Highlighted events hosted by the International Research Wing at IIT Kanpur
             </span>
           </motion.h1>
 
-          // <motion.p
-          //   initial={{ opacity: 0, y: 20 }}
-          //   animate={{ opacity: 1, y: 0 }}
-          //   transition={{ duration: 0.8, delay: 0.2 }}
-          //   className={styles.subtitle}
-          // >
-          //   Highlighted events hosted by the International Research Wing at IIT Kanpur
-          // </motion.p>
+          {/* 
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className={styles.subtitle}
+          >
+            Highlighted events hosted by the International Research Wing at IIT Kanpur
+          </motion.p>
+          */}
 
           <motion.div
             initial={{ opacity: 0 }}

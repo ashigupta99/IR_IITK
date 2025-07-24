@@ -12,6 +12,7 @@ import FEP from '../../components/FEP';
 import Gallery from '../../components/Gallery';
 import Resources from '../../components/Resources';
 
+
 function useScrollAnimation() {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
