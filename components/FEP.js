@@ -11,36 +11,63 @@ export default function FEP() {
   return (
     <>
       <HeroHighlight>
-        <div className={styles.heroContainer}>
+  
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "2rem",
+          padding: "5rem 1rem",
+        }}
+      >
+   
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className={styles.title}
-          >
-            <span className={styles.highlightText}>
-              Highlighted events hosted by the International Research Wing at IIT Kanpur
-            </span>
-          </motion.h1>
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          style={{
+            fontSize: "4rem", 
+            fontWeight: "900",
+            textAlign: "center",
+            
+          }}
+        >
+          <span className={[styles.highlightText, "gradient-text"].join(" ")}>
+  Collaborate Globally, Succeed Universally
 
-          {/* 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className={styles.subtitle}
-          >
-            Highlighted events hosted by the International Research Wing at IIT Kanpur
-          </motion.p>
-          */}
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className={styles.divider}
-          />
-        </div>
+          </span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          style={{
+            fontSize: "1.5rem",
+            maxWidth: "600px",
+            textAlign: "center",
+            color:" black",
+            fontWeight: "500",
+          }}
+        >
+          Highlighted events hosted by the International Research Wing at IIT Kanpur.
+        </motion.p>
+         
+         <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+          style={{
+            width: "160px",
+            height: "4px",
+            borderRadius: "9999px",
+            background: "linear-gradient(to right, #d35400, #f39c12, #e8d8c9)",
+            animation: "pulse 1.5s infinite ease-in-out",
+          }}
+        />
+      </div>
       </HeroHighlight>
 
       <main className={styles.main}>
