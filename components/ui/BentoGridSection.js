@@ -100,7 +100,7 @@ const items = [
   {
     title: "Surge Info Session",
     description:
-       "Have you heard about SURGE (Students-Undergraduate Research Graduate Excellence), a research program meant to develop and promote a research and interdisciplinary education culture amongst undergraduates. Under this program, students from IIT-K and other participating institutions all across India and SAARC nations undertake short-duration but focused research projects under professors. The duration of the program is approximately eight weeks.",,
+       "Have you heard about SURGE (Students-Undergraduate Research Graduate Excellence), a research program meant to develop and promote a research and interdisciplinary education culture amongst undergraduates. Under this program, students from IIT-K and other participating institutions all across India and SAARC nations undertake short-duration but focused research projects under professors. The duration of the program is approximately eight weeks.",
     imageSrc: "/Images/surgeimage.webp",
     alt: "SURGE Program",
     // icon: <IconFileBroken className="bento-icon-svg" />,
@@ -108,7 +108,7 @@ const items = [
   {
     title: "Buddy Program",
     description:
-       "The Buddy Program pairs incoming international students with volunteers from the fourth/fifth years. Volunteers assist with day-to-day challenges, including academics and socio-cultural integration, helping international students acclimatize to IITK and India.",
+       "The Buddy Program pairs incoming international students with volunteers from the fourth/fifth years.",
      
     imageSrc: "/Images/imagebuddyprogram.jpeg",
     alt: "Buddy Program",
@@ -117,7 +117,7 @@ const items = [
   {
     title: "Foreign Students Orientation",
     description:
-     "The Foreign Students Orientation in MnC clubs helps international students integrate into IITK. This brief orientation introduces them to the campus culture, helping to resolve academic pressure and homesickness, and fostering a welcoming environment.",
+     "The Foreign Students Orientation in MnC clubs helps international students integrate into IITK. This brief orientation introduces them to",
     imageSrc: "/images/orientation.jpg",
     alt: "Orientation Program",
     // icon: <IconTableColumn className="bento-icon-svg" />,
@@ -125,7 +125,7 @@ const items = [
   {
     title: "SemEx Sessions",
     description:
-    "SemEx Sessions ahead of the spring and fall semesters dispel myths, raise awareness, and encourage overseas semester exchanges. Information from seniors and the OIR helps students prepare and explore their options for international programs.",
+    "SemEx Sessions ahead of the spring and fall semesters dispel myths,",
     imageSrc: "/images/exchange.jpg",
     alt: "SemEx Sessions",
     // icon: <IconArrowWaveRightUp className="bento-icon-svg" />,
@@ -133,7 +133,7 @@ const items = [
   {
     title: "Foreign Exposure Program",
     description:
-    "The Foreign Exposure Program allows undergraduates to gain international exposure through research or training at prestigious institutions abroad. The IR wing recruits professors globally and offers financial assistance, fostering academic and research excellence.",
+    "The Foreign Exposure Program allows undergraduates to gain international ",
     imageSrc: "/images/airplane.jpg",
     alt: "Foreign Exposure",
     // icon: <IconBoxAlignTopLeft className="bento-icon-svg" />,
@@ -141,7 +141,7 @@ const items = [
   {
     title: "International Programs",
     description:
-       "Sessions like MITACS, Summer@EPFL, and DAAD-WISE feature speakers and representatives who share insights and experiences. These sessions expand students' horizons academically and professionally, providing valuable international exposure.",
+       "Sessions like MITACS, Summer@EPFL, and DAAD-WISE feature speakers and representatives who share insights and experiences. .",
     imageSrc: "/images/exchange.jpg",
     alt: "International Programs",
     // icon: <IconBoxAlignRightFilled className="bento-icon-svg" />,
