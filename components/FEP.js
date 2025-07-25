@@ -6,6 +6,7 @@ import { HeroHighlight } from "./ui/HeroHighlight";
 import { motion } from "framer-motion";
 import { BentoGridSection } from "./ui/BentoGridSection";
 import React from "react";
+import "./globals.css";
 
 export default function FEP() {
   return (
