@@ -36,7 +36,7 @@ function BentoItem({ item, index }) {
             className="bento-image"
           />
         </div>
-        // <div className="bento-icon">{item.icon}</div>
+        <div className="bento-icon">{item.icon}</div>
         <h3 className="bento-title">{item.title}</h3>
         <p className="bento-description">{item.description}</p>
       </div>
