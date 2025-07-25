@@ -18,7 +18,7 @@ export function BentoGridItem({ className, title, description, header}) {
     >
       
       {header && <div className="bento-item-header">{header}</div>}
-      // <div className="bento-item-icon">{icon}</div>
+      <div className="bento-item-icon">{icon}</div>
       <div className="bento-item-title">{title}</div>
       <div className="bento-item-description">{description}</div>
     </motion.div>
