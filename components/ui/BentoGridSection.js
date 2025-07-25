@@ -14,45 +14,78 @@ import {
 } from "@tabler/icons-react";
 
 // Individual Bento Item Component
-function BentoItem({ item, index }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+// function BentoItem({ item, index }) {
+//   const ref = useRef(null);
+//   const isInView = useInView(ref, { once: true });
 
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      className={`bento-item-wrapper ${index === 3 || index === 6 ? "col-span-2" : ""}`}
-    >
-      <div className="bento-item">
-        <div className="bento-header">
-          <Image
-            src={item.imageSrc}
-            alt={item.alt}
-            width={800}
-            height={500}
-            className="bento-image"
-          />
-        </div>
-        <div className="bento-icon">{item.icon}</div>
-        <h3 className="bento-title">{item.title}</h3>
-        <p className="bento-description">{item.description}</p>
-      </div>
-    </motion.div>
-  );
-}
+//   return (
+//     <motion.div
+//       ref={ref}
+//       initial={{ opacity: 0, y: 30 }}
+//       animate={isInView ? { opacity: 1, y: 0 } : {}}
+//       transition={{ duration: 0.6, delay: index * 0.1 }}
+//       className={`bento-item-wrapper ${index === 3 || index === 6 ? "col-span-2" : ""}`}
+//     >
+//       <div className="bento-item">
+//         <div className="bento-header">
+//           <Image
+//             src={item.imageSrc}
+//             alt={item.alt}
+//             width={800}
+//             height={500}
+//             className="bento-image"
+//           />
+//         </div>
+//         <div className="bento-icon">{item.icon}</div>
+//         <h3 className="bento-title">{item.title}</h3>
+//         <p className="bento-description">{item.description}</p>
+//       </div>
+//     </motion.div>
+//   );
+// }
 
+// export function BentoGridSection() {
+//   return (
+//     <div className="bento-grid">
+//       {items.map((item, i) => (
+//         <BentoItem item={item} index={i} key={i} />
+//       ))}
+//     </div>
+//   );
+// }
 export function BentoGridSection() {
   return (
     <div className="bento-grid">
-      {items.map((item, i) => (
-        <BentoItem item={item} index={i} key={i} />
-      ))}
+      {items.map((item, i) => {
+        const ref = useRef(null);
+        const isInView = useInView(ref, { once: true });
+
+        return (
+          <motion.div
+            ref={ref}
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: i * 0.1 }}
+            className={`bento-item-wrapper ${i === 3 || i === 6 ? "col-span-2" : ""}`}
+          >
+            <div className="bento-item">
+              <div className="bento-header">{item.header}</div>
+              <div className="bento-icon">{item.icon}</div>
+              <h3 className="bento-title">{item.title}</h3>
+              <p className="bento-description">{item.description}</p>
+            </div>
+          </motion.div>
+        );
+      })}
     </div>
   );
 }
+
+const Skeleton = () => (
+  <div className="skeleton"></div>
+);
+
 
 // Data
 const items = [
