@@ -44,15 +44,15 @@ import {
   );
 }
 
-// export function BentoGridSection() {
-//   return (
-//     <div className="bento-grid">
-//       {items.map((item, i) => (
-//         <BentoItem item={item} index={i} key={i} />
-//       ))}
-//     </div>
-//   );
-// }
+ export function BentoGridSection() {
+   return (
+     <div className="bento-grid">
+      {items.map((item, i) => (
+         <BentoItem item={item} index={i} key={i} />
+       ))}
+   </div>
+  );
+ }
 // export function BentoGridSection() {
 //   return (
 //     <div className="bento-grid">
