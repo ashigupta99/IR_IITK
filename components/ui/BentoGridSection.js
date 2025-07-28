@@ -118,7 +118,7 @@ const items = [
     title: "Foreign Students Orientation",
     description:
       "The Foreign Students Orientation in MnC clubs helps international students integrate into IITK. This brief orientation introduces them to the campus culture, helping to resolve academic pressure and homesickness, and fostering a welcoming environment.",
-    imageSrc: "/images/orientation.jpg",
+    imageSrc: "/images/Image1.jpg",
     alt: "Orientation Program",
     // icon: <IconTableColumn className="bento-icon-svg" />,
   },
@@ -126,7 +126,7 @@ const items = [
     title: "SemEx Sessions",
     description:
     "SemEx Sessions ahead of the spring and fall semesters dispel myths, raise awareness, and encourage overseas semester exchanges. Information from seniors and the OIR helps students prepare and explore their options for international programs.",
-    imageSrc: "/images/exchange.jpg",
+    imageSrc: "/images/Image2.jpg",
     alt: "SemEx Sessions",
     // icon: <IconArrowWaveRightUp className="bento-icon-svg" />,
   },
@@ -134,7 +134,7 @@ const items = [
     title: "Foreign Exposure Program",
     description:
   "The Foreign Exposure Program allows undergraduates to gain international exposure through research or training at prestigious institutions abroad. The IR wing recruits professors globally and offers financial assistance, fostering academic and research excellence.",
-    imageSrc: "/images/airplane.jpg",
+    imageSrc: "/images/Image3.jpg",
     alt: "Foreign Exposure",
     // icon: <IconBoxAlignTopLeft className="bento-icon-svg" />,
   },
@@ -142,7 +142,7 @@ const items = [
     title: "International Programs",
     description:
      "Sessions like MITACS, Summer@EPFL, and DAAD-WISE feature speakers and representatives who share insights and experiences. These sessions expand students' horizons academically and professionally, providing valuable international exposure.",
-    imageSrc: "/images/exchange.jpg",
+    imageSrc: "/images/Image4.jpg",
     alt: "International Programs",
     // icon: <IconBoxAlignRightFilled className="bento-icon-svg" />,
   },
