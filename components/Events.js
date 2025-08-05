@@ -8,7 +8,7 @@ import { BentoGridSection } from "./ui/BentoGridSection";
 import React from "react";
 import "./globals.css";
 
-export default function FEP() {
+export default function Events() {
   return (
     <>
       <HeroHighlight>
