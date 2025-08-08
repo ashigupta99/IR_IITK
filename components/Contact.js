@@ -1,12 +1,3 @@
-// export default function Contact() {
-//   return (
-//     <div>
-//       <h1>Contact</h1>
-//       <p>Contact us at ir@iitk.ac.in.</p>
-//     </div>
-//   );
-// }
-
 'use client';
 import Image from 'next/image';
 import './contact.css';
@@ -14,20 +5,26 @@ import { FaLinkedin } from 'react-icons/fa';
 
 const teamMembers = [
   {
-    name: 'Divi',
-    title: 'Coordinator, IR Wing',
-    phone: '+91 xxxxxxxxxx',
-    image: '/nirjala.jpg',
-    linkedin: '#',
+    name: 'Divi Pothukuchi',
+    title: 'Coordinator',
+    phone: '+91 9884097619',
+    image: '/divi.jpg',
+    linkedin: 'https://www.linkedin.com/in/divi-pothukuchi-645867281/',
   },
   {
-    name: 'Abc',
-    title: 'Coordinator, IR Wing ',
-    phone: '+91 xxxxxxxxxx',
-    image: '/susruth.jpg',
-    linkedin: '#',
+    name: 'Vaibhav Kumar',
+    title: 'Coordinator',
+    phone: '+91 6307807237',
+    image: '/vaibhav.jpg',
+    linkedin: 'https://www.linkedin.com/in/vaibhav-kumar-43b3b5298',
   },
-  
+  {
+    name: 'Aaryan Chandral',
+    title: 'Coordinator',
+    phone: '+91 9315210739',
+    image: '/aaryan.jpg', 
+    linkedin: 'https://www.linkedin.com/in/aaryan-chandra-080347166?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+  },
 ];
 
 export default function Contact() {

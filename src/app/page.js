@@ -6,9 +6,10 @@ import Image from 'next/image'
 
 // Event content components
 import About from '../../components/About';
+import FEP from '../../components/FEP';
 import Blogs from '../../components/Blogs';
 import Contact from '../../components/Contact';
-import FEP from '../../components/FEP';
+import Events from '../../components/Events';
 import Gallery from '../../components/Gallery';
 import Resources from '../../components/Resources';
 
@@ -44,8 +45,9 @@ export default function HomePage() {
 
   // Animation refs for each section
   const [aboutRef, aboutVisible] = useScrollAnimation();
-  const [blogsRef, blogsVisible] = useScrollAnimation();
   const [fepRef, fepVisible] = useScrollAnimation();
+  const [blogsRef, blogsVisible] = useScrollAnimation();
+  const [eventsRef, eventsVisible] = useScrollAnimation();
   const [resourcesRef, resourcesVisible] = useScrollAnimation();
   const [galleryRef, galleryVisible] = useScrollAnimation();
   const [contactRef, contactVisible] = useScrollAnimation();
@@ -58,8 +60,9 @@ export default function HomePage() {
       {/* Sidebar */}
       <div className={`sidebar ${sidebarOpen ? 'active' : ''}`}>
         <a href="#about" onClick={toggleSidebar}>About</a>
+        <a href="#fep" onClick={toggleSidebar}>FEP</a>
         <a href="#blogs" onClick={toggleSidebar}>Blogs</a>
-        <a href="#FEP" onClick={toggleSidebar}>FEP</a>
+        <a href="#Events" onClick={toggleSidebar}>Events</a>
         <a href="#resources" onClick={toggleSidebar}>Resources</a>
         <a href="#gallery" onClick={toggleSidebar}>Gallery</a>
         <a href="#contact" onClick={toggleSidebar}>Contact</a>
@@ -118,6 +121,14 @@ export default function HomePage() {
         </div>
 
         <div
+          id="FEP"
+          ref={fepRef}
+          className={`content-section scroll-animate ${fepVisible ? 'visible' : ''}`}
+        >
+          <FEP />
+        </div>
+
+        <div
           id="blogs"
           ref={blogsRef}
           className={`content-section scroll-animate ${blogsVisible ? 'visible' : ''}`}
@@ -126,11 +137,11 @@ export default function HomePage() {
         </div>
 
         <div
-          id="FEP"
-          ref={fepRef}
-          className={`content-section scroll-animate ${fepVisible ? 'visible' : ''}`}
+          id="Events"
+          ref={eventsRef}
+          className={`content-section scroll-animate ${eventsVisible ? 'visible' : ''}`}
         >
-          <FEP />
+          <Events />
         </div>
 
         <div
