@@ -26,3 +26,11 @@
   /* Animation yahan apply kiya gaya hai */
   animation: pulse 2s infinite ease-in-out;
 }
+@media (max-width: 600px) {
+  .highlightText {
+    font-size: 2rem !important;
+  }
+  .main {
+    padding: 1rem;
+  }
+}
