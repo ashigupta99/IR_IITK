@@ -2,9 +2,12 @@
 
 import { useRef, useState, useEffect } from 'react';
 import SplitText from '../../components/ui/SplitText';
-import Image from 'next/image'
+import Image from 'next/image';
 
-// Event content components
+// Component Imports
+import Header from '../../components/Header';
+import Sidebar from '../../components/Sidebar';
+
 import About from '../../components/About';
 import FEP from '../../components/FEP';
 import Blogs from '../../components/Blogs';
@@ -13,7 +16,7 @@ import Events from '../../components/Events';
 import Gallery from '../../components/Gallery';
 import Resources from '../../components/Resources';
 
-
+// Custom hook for scroll animations (no changes needed here)
 function useScrollAnimation() {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -36,10 +39,11 @@ function useScrollAnimation() {
     return () => observer.disconnect();
   }, []);
 
-  return [ref, visible]; 
+  return [ref, visible];
 }
 
-export default function HomePage() {
+// Main Home Page Component
+export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
@@ -54,22 +58,15 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Sidebar Toggle */}
-      <button className="menu-toggle" onClick={toggleSidebar}>☰ Menu</button>
+      <Header onMenuToggle={toggleSidebar} />
 
-      {/* Sidebar */}
-      <div className={`sidebar ${sidebarOpen ? 'active' : ''}`}>
-        <a href="#about" onClick={toggleSidebar}>About</a>
-        <a href="#fep" onClick={toggleSidebar}>FEP</a>
-        <a href="#blogs" onClick={toggleSidebar}>Blogs</a>
-        <a href="#Events" onClick={toggleSidebar}>Events</a>
-        <a href="#resources" onClick={toggleSidebar}>Resources</a>
-        <a href="#gallery" onClick={toggleSidebar}>Gallery</a>
-        <a href="#contact" onClick={toggleSidebar}>Contact</a>
-      </div>
+      {/* ✅ Naye 'Sidebar' component ka istemal kiya gaya hai */}
+      <Sidebar isOpen={sidebarOpen} onClose={toggleSidebar} />
 
-      {/* Page Wrapper */}
-      <div className={`main-wrapper ${sidebarOpen ? 'with-sidebar' : ''}`}>
+      {/* ❌ Purana direct sidebar ka code (div) yahan se poori tarah hata diya gaya hai */}
+
+      {/* ✅ 'with-sidebar' class ki ab zaroorat nahi hai, kyunki menu ab overlay hai */}
+      <div className="main-wrapper">
 
         {/* Hero Section */}
         <div className="main-container">
@@ -103,68 +100,26 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* ✅ Logos after Hero */}
-        <div className="logo-wrapper">
-          <div className="hero-logos">
-            <Image src="/logo1.jpg" alt="Logo 1" width={150} height={150} />
-            <Image src="/logo2.jpg" alt="Logo 2" width={150} height={150} />
-          </div>
-        </div>
-
-        {/* Scroll-enabled Sections */}
-        <div
-          id="about"
-          ref={aboutRef}
-          className={`content-section scroll-animate ${aboutVisible ? 'visible' : ''}`}
-        >
+        {/* All Content Sections */}
+        <div id="about" ref={aboutRef} className={`content-section scroll-animate ${aboutVisible ? 'visible' : ''}`}>
           <About />
         </div>
-
-        <div
-          id="FEP"
-          ref={fepRef}
-          className={`content-section scroll-animate ${fepVisible ? 'visible' : ''}`}
-        >
+        <div id="fep" ref={fepRef} className={`content-section scroll-animate ${fepVisible ? 'visible' : ''}`}>
           <FEP />
         </div>
-
-        <div
-          id="blogs"
-          ref={blogsRef}
-          className={`content-section scroll-animate ${blogsVisible ? 'visible' : ''}`}
-        >
+        <div id="blogs" ref={blogsRef} className={`content-section scroll-animate ${blogsVisible ? 'visible' : ''}`}>
           <Blogs />
         </div>
-
-        <div
-          id="Events"
-          ref={eventsRef}
-          className={`content-section scroll-animate ${eventsVisible ? 'visible' : ''}`}
-        >
+        <div id="Events" ref={eventsRef} className={`content-section scroll-animate ${eventsVisible ? 'visible' : ''}`}>
           <Events />
         </div>
-
-        <div
-          id="resources"
-          ref={resourcesRef}
-          className={`content-section scroll-animate ${resourcesVisible ? 'visible' : ''}`}
-        >
+        <div id="resources" ref={resourcesRef} className={`content-section scroll-animate ${resourcesVisible ? 'visible' : ''}`}>
           <Resources />
         </div>
-
-        <div
-          id="gallery"
-          ref={galleryRef}
-          className={`content-section scroll-animate ${galleryVisible ? 'visible' : ''}`}
-        >
+        <div id="gallery" ref={galleryRef} className={`content-section scroll-animate ${galleryVisible ? 'visible' : ''}`}>
           <Gallery />
         </div>
-
-        <div
-          id="contact"
-          ref={contactRef}
-          className={`content-section scroll-animate ${contactVisible ? 'visible' : ''}`}
-        >
+        <div id="contact" ref={contactRef} className={`content-section scroll-animate ${contactVisible ? 'visible' : ''}`}>
           <Contact />
         </div>
       </div>

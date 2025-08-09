@@ -13,7 +13,6 @@ import {
   IconTableColumn,
 } from "@tabler/icons-react";
 
-// Individual Bento Item Component
  function BentoItem({ item, index }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });

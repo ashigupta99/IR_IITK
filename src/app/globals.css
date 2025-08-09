@@ -1,103 +1,164 @@
-/* Global Reset & Base Styles */
+/* ===== GLOBAL & FONT STYLES ===== */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-html, body {
+html {
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-  background: #fce7bf;
+  font-family: "Inter", "Segoe UI", sans-serif;
   color: #334155;
 }
 
-/* Sidebar Toggle Button */
-.menu-toggle {
+@font-face {
+  font-family: "Tiempos Headline Medium";
+  src: url("/fonts/TiemposHeadline-Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* ===== HEADER & NAVIGATION ===== */
+/* Base styles for the header - Mobile First (Floating) */
+.site-header {
   position: fixed;
-  top: 20px;
-  left: 20px;
   z-index: 1001;
-  background: #fce7bf;
-  color: black;
-  border: none;
-  font-size: 1.2rem;
-  padding: 10px 15px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  height: 70px;
+  padding: 0 3rem;
+  width: 100%;
+  background-color: #ffffff;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px believable 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
 }
 
-.menu-toggle:hover {
-  background-color: #e2e8f0;
-  transform: scale(1.1);
-}
-
-/* Sidebar Styles */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -200px;
-  width: 200px;
+/* Container for header content */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
   height: 100%;
-  background-color: #1e293b;
-  padding-top: 60px;
-  transition: left 0.3s ease;
+  margin: 0 auto; /* Ensures it stays centered */
+}
+
+.logo-container a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.logo-container .logo-text {
+  margin-left: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.desktop-nav {
+  display: none; /* Hidden on mobile by default */
+  gap: 28px;
+}
+
+.desktop-nav a {
+  text-decoration: none;
+  color: #334155;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.desktop-nav a:hover {
+  color: #00509e; /* A nice highlight color on hover */
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+
+/* ===== TOP-DOWN FULL-SCREEN MENU ===== */
+.top-menu {
+  position: fixed;
   z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(20, 25, 40, 0.95);
+  backdrop-filter: blur(5px);
+  transform: translateY(-100%);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-menu.active {
+  transform: translateY(0);
+}
+
+.menu-links {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
 
-.sidebar a {
+.menu-links a {
   color: white;
   text-decoration: none;
+  font-size: 2rem;
+  font-weight: 500;
   padding: 10px 20px;
-  border-bottom: 1px solid #334155;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.sidebar a:hover {
-  background: #334155;
-  background: #475569;      /* Slightly lighter background */
-  transform: scale(1.05);   /* Grow a little */
+.menu-links a:hover {
+  transform: scale(1.1);
+  color: #fce7bf;
 }
 
-.sidebar a:first-child {
-  margin-top: 1rem;
+.close-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 3rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.sidebar.active {
-  left: 0;
+.close-btn:hover {
+  transform: rotate(90deg) scale(1.1);
 }
 
-/* Main wrapper to shift content when sidebar is active */
-.main-wrapper {
-  transition: margin-left 0.3s ease;
-  padding-bottom: 10rem; /* extra height to allow scrolling */
-}
-
-.main-wrapper.with-sidebar {
-  margin-left: 200px;
-}
-
-/* Hero Section */
 .main-container {
   background: url("/bg1.jpg") no-repeat center center / cover;
   height: 100vh;
-  width: 100%;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: margin-left 0.3s ease;
 }
 
-/* Overlay */
 .overlay {
   position: absolute;
   inset: 0;
@@ -108,27 +169,8 @@ html, body {
   justify-content: center;
 }
 
-/* Hero Text */
 .center-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
   text-align: center;
-  margin-top: 9vh;
-}
-
-.line {
-  line-height: 1.4;
-}
-
-/* Custom Font */
-@font-face {
-  font-family: "Tiempos Headline Medium";
-  src: url("/fonts/TiemposHeadline-Medium.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
 }
 
 .animated-text {
@@ -136,130 +178,16 @@ html, body {
   font-weight: bold;
   color: white;
   white-space: nowrap;
-  margin: 0;
-  font-family: 'Tiempos Headline Medium';
-}
-
-/* Section Styles */
-.content-section {
-  background: #fcf2e0;
-  margin: 4rem auto;
-  max-width: 1200px;
-  border-radius: 15px;
-  padding: 3rem 2rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  text-align: center;
-  min-height: 60vh;
-  scroll-margin-top: 49px;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .content-section:hover {
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-    transform: translateY(-5px);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-  }
-}
-
-.content-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #090101;
-}
-
-.content-section p {
-  font-size: 1.2rem;
-  color: #080101;
+  font-family: "Tiempos Headline Medium";
 }
 
 
-@media (max-width: 640px) {
-  .content-section.scroll-animate {
-    transform: none !important;
-    opacity: 1 !important;
-  }
-
-  .sidebar {
-    width: 160px; /* narrower sidebar */
-  }
-
-  .main-wrapper.with-sidebar {
-    margin-left: 160px;
-  }
-}
-
-/* 👉 Mobile / Small Screen Styles */
-@media (max-width: 640px) {
-  .animated-text {
-    font-size: 1.5rem;
-    white-space: normal;
-    text-align: center;
-    padding: 0.1rem;
-  }
-
-  .center-text {
-    margin-top: 5vh;
-    gap: 0.2rem;
-  }
-
-  .content-section {
-    margin: 2rem 1rem;
-    scroll-margin-top: 30px;
-    padding: 1.5rem 1rem;
-    min-height: auto; /* allow auto height on sections */
-  }
-
-  .content-section h2 {
-    font-size: 1.8rem;
-  }
-
-  .content-section p {
-    font-size: 1rem;
-  }
-
-  .sidebar {
-    width: 160px;
-    padding-top: 50px;
-  }
-
-  .main-wrapper.with-sidebar {
-    margin-left: 160px;
-  }
-
-  .menu-toggle {
-    font-size: 1rem;
-    padding: 8px 12px;
-  }
-
-  .line {
-    line-height: 1.2;
-  }
-}
-
-
-.scroll-animate {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  will-change: transform, opacity;
-}
-
-.scroll-animate.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-
-
-/* ✅ Logo Wrapper Container for spacing */
+/* ===== LOGOS & CONTENT SECTIONS ===== */
 .logo-wrapper {
   padding: 2rem 0;
   display: flex;
   justify-content: center;
 }
-
-/* ✅ Logo Row */
 .hero-logos {
   display: flex;
   gap: 2.5rem;
@@ -267,23 +195,65 @@ html, body {
   justify-content: center;
   flex-wrap: wrap;
 }
-
-/* ✅ Logo image styles */
 .hero-logos img {
   width: 150px;
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
-
-/* ✅ Hover effect */
 .hero-logos img:hover {
   transform: scale(1.05);
 }
 
-/* ✅ Smaller logos on small devices */
+.content-section {
+  background: #fcf2e0;
+  margin: 4rem auto;
+  max-width: 1200px;
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  scroll-margin-top: 100px;
+}
+
+
+/* ===== RESPONSIVE & ANIMATION STYLES ===== */
+
+/* Desktop Styles (992px and wider) */
+@media (min-width: 992px) {
+
+  /* Header content gets a max-width and is centered */
+  .header-container {
+    max-width: 1400px;
+  }
+
+  .desktop-nav {
+    display: flex;
+  }
+  .site-header .menu-toggle {
+    display: none;
+  }
+}
+
+/* Mobile Styles (640px and smaller) */
 @media (max-width: 640px) {
+  .animated-text {
+    font-size: 1.8rem;
+    white-space: normal;
+  }
   .hero-logos img {
     width: 70px;
   }
+}
+
+/* Scroll Animation */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
