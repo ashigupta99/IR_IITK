@@ -1,14 +1,10 @@
 'use client';
 
 import { useRef, useState, useEffect } from 'react';
-import SplitText from '../../components/ui/SplitText';
-import Image from 'next/image';
 
 // Component Imports
 import Header from '../../components/Header';
 import Sidebar from '../../components/Sidebar';
-
-import About from '../../components/About';
 import FEP from '../../components/FEP';
 import Blogs from '../../components/Blogs';
 import Contact from '../../components/Contact';
@@ -47,8 +43,6 @@ export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
-  // Animation refs for each section
-  const [aboutRef, aboutVisible] = useScrollAnimation();
   const [fepRef, fepVisible] = useScrollAnimation();
   const [blogsRef, blogsVisible] = useScrollAnimation();
   const [eventsRef, eventsVisible] = useScrollAnimation();
@@ -60,50 +54,24 @@ export default function Home() {
     <>
       <Header onMenuToggle={toggleSidebar} />
 
-      {/* ✅ Naye 'Sidebar' component ka istemal kiya gaya hai */}
       <Sidebar isOpen={sidebarOpen} onClose={toggleSidebar} />
-
-      {/* ❌ Purana direct sidebar ka code (div) yahan se poori tarah hata diya gaya hai */}
-
-      {/* ✅ 'with-sidebar' class ki ab zaroorat nahi hai, kyunki menu ab overlay hai */}
       <div className="main-wrapper">
 
         {/* Hero Section */}
         <div className="main-container">
           <div className="overlay">
-            <div className="center-text">
-              <div className="line">
-                <SplitText
-                  text="Greetings from the"
-                  className="animated-text"
-                  delay={100}
-                  duration={0.1}
-                  ease="power3.out"
-                  splitType="words"
-                  from={{ opacity: 0, y: 30 }}
-                  to={{ opacity: 1, y: 0 }}
-                />
-              </div>
-              <div className="line">
-                <SplitText
-                  text="International Relations Wing, IIT Kanpur"
-                  className="animated-text"
-                  delay={50}
-                  duration={0.1}
-                  ease="power3.out"
-                  splitType="words"
-                  from={{ opacity: 0, y: 30 }}
-                  to={{ opacity: 1, y: 0 }}
-                />
-              </div>
+            <div className="text-card">
+              <p>
+                The International Relations Wing of the Academics and Career Council at IIT Kanpur is a dedicated team of bright and ambitious students committed to fostering and nurturing relationships between IITK and its international counterparts. Working closely with the Office of International Relations (OIR), our mission is to encourage talented young minds to explore their areas of interest, enhance their skills, and develop a global perspective through semester exchange programs and research internships with top-notch international institutes.
+              </p>
+              <p>
+                Our team works tirelessly to maintain a spirit of collaboration, excitement, and a broad perspective in the interest of campus community. We are dedicated to enriching the IITK community and promoting global academic exchange.
+              </p>
             </div>
           </div>
         </div>
 
         {/* All Content Sections */}
-        <div id="about" ref={aboutRef} className={`content-section scroll-animate ${aboutVisible ? 'visible' : ''}`}>
-          <About />
-        </div>
         <div id="fep" ref={fepRef} className={`content-section scroll-animate ${fepVisible ? 'visible' : ''}`}>
           <FEP />
         </div>

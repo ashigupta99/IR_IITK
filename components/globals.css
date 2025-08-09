@@ -1,27 +1,28 @@
+/* Ek sundar, kaam karne wala highlight text */
 .highlightText {
-  /* background: linear-gradient(to right, #a78bfa, #c084fc); */
+  background: linear-gradient(to right, #a855f7, #3b82f6); /* Example gradient */
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
-  /* background: linear-gradient(to right, #5e87f5, #a78bfa); */
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* background: linear-gradient(to right, #a855f7, #3b82f6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
 }
 
+/* Pulse animation ki definition */
 @keyframes pulse {
   0%, 100% {
     opacity: 1;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.7; /* 0.5 bahut zyada fade ho raha tha, 0.7 behtar lagega */
   }
 }
+
+/* Gradient text jo pulse animation ka istemal kar raha hai */
  .gradient-text {
   background: linear-gradient(to right, #000000, #2c3e50);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-}  
+
+  /* Animation yahan apply kiya gaya hai */
+  animation: pulse 2s infinite ease-in-out;
+}

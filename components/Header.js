@@ -11,7 +11,6 @@ const Header = ({ onMenuToggle }) => {
           </a>
         </div>
         <nav className="desktop-nav">
-          <a href="#about">About</a>
           <a href="#fep">FEP</a>
           <a href="#blogs">Blogs</a>
           <a href="#Events">Events</a>
