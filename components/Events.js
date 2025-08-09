@@ -19,7 +19,7 @@ export default function Events() {
           flexDirection: "column",
           alignItems: "center",
           gap: "2rem",
-          padding: "5rem 1rem",
+          padding:"clamp(2rem, 6vw, 5rem) 1rem"
         }}
       >
    
@@ -28,7 +28,7 @@ export default function Events() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           style={{
-            fontSize: "4rem", 
+            fontSize: "clamp(2rem, 5vw, 4rem)",
             fontWeight: "900",
             textAlign: "center",
             
@@ -46,7 +46,7 @@ export default function Events() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           style={{
-            fontSize: "1.5rem",
+            fontSize:  "clamp(1rem, 3vw, 1.5rem)",
             maxWidth: "600px",
             textAlign: "center",
             color:" black",
