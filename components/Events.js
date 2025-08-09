@@ -19,7 +19,10 @@ export default function Events() {
           flexDirection: "column",
           alignItems: "center",
           gap: "2rem",
-          padding:"clamp(2rem, 6vw, 5rem) 1rem"
+         paddingTop: "clamp(2rem, 6vw, 5rem)",
+         paddingBottom: "clamp(2rem, 6vw, 5rem)",
+         paddingLeft: "1rem",
+          paddingRight: "1rem"
         }}
       >
    
