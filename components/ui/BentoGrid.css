@@ -4,6 +4,7 @@
   gap: 1rem;
   width: 100%;
    background-color: white;
+  padding: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -24,7 +25,7 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 16rem;
-  padding: 1.5rem;
+  padding:  clamp(1rem, 3vw, 1.5rem);
   border-radius: 12px;
   background-color:  white;
   box-shadow: 0 8px 24px rgba(255, 255, 255, 0.05);
@@ -57,13 +58,13 @@
 .bento-item-title {
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 1rem;
+  font-size:clamp(0.9rem, 2.5vw, 1rem);
   color: black;
   margin-top: 0.5rem;
 }
 
 .bento-item-description {
-  font-size: 0.875rem;
+  font-size:  clamp(0.8rem, 2.2vw, 0.875rem);
   font-family: sans-serif;
   color: black;
   margin-top: 0.25rem;
