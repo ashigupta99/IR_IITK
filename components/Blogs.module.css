@@ -130,3 +130,53 @@
   color: #6b7280;
   font-weight: 400;
 }
+
+/* 📱 Responsive Styles */
+@media (max-width: 1024px) {
+  .blogsLayout {
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .blogsLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .featuredBlog h2 {
+    font-size: 1.8rem;
+  }
+
+  .featuredBlog p {
+    font-size: 1rem;
+  }
+
+  .trending {
+    margin-top: 2rem;
+  }
+
+  .blogCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .blogCard img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .featuredBlog {
+    padding: 1rem;
+  }
+
+  .featuredBlog h2 {
+    font-size: 1.5rem;
+  }
+
+  .blogsLayout {
+    padding: 0 1rem;
+  }
+}
