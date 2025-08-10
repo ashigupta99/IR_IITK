@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 
 const Header = ({ onMenuToggle }) => {
@@ -5,12 +6,13 @@ const Header = ({ onMenuToggle }) => {
     <header className="site-header">
       <div className="header-container">
         <div className="logo-container">
-          <a href="/">
+          <Link href="/" className="logo-link">
             <Image src="/logo2.jpg" alt="IR Wing Logo" width={45} height={45} />
             <span className="logo-text">International Relations Wing</span>
-          </a>
+          </Link>
         </div>
         <nav className="desktop-nav">
+          {/* Internal page section links */}
           <a href="#fep">FEP</a>
           <a href="#blogs">Blogs</a>
           <a href="#Events">Events</a>
