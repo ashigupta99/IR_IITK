@@ -5,51 +5,82 @@ import BlogCard from './BlogCard';
 import styles from './Blogs.module.css';
 
 const featured = {
-  image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1200&q=80',
-  title: 'How to Record A Podcast Remotely | 4 Methods to Try',
-  summary: 'Learn how to record a podcast remotely with our full step-by-step guide...',
-  author: 'Stephen Robles',
-  tag: 'Podcast recording',
-  date: 'October 11, 2024',
-  readTime: '8 min',
+  image: '/Images/one.png',
+  title: 'Soaring to Success: Team Aerial Robotics Wins 1st Place at ICUAS 2025',
+  summary: 'What does it take to be a winner? To battle it out with the most ingenious minds across the globe and win first place is nothing short of extraordinary.',
+  author: 'Prerana Ghosh, Aradhana Papnai and Arnisha Dhingra',
+  tag: 'Read on Medium',
+  link: 'https://medium.com/@ug_anc/soaring-to-success-team-aerial-robotics-wins-1st-place-at-icuas-2025-17b5d835bc14',
+  date: 'Jun 10, 2025',
+  readTime: '4 min',
 };
+
 
 const trending = [
   {
-    image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80',
-    title: 'How to Use iPhone as Webcam on Mac & Windows',
-    tag: 'Studio equipment',
-    date: 'Jun 26, 2024',
-    readTime: '14 min',
+    image: '/Images/two.png',
+    title: 'Mridul Gupta’s Research Adventure at Saarland',
+    tag: 'Read on Medium',
+    link: 'https://medium.com/@ug_anc/from-punjab-to-germany-mridul-guptas-research-adventure-at-saarland-e08af841b41c',
+    date: 'Jun 29, 2025',
+    readTime: '6 min',
   },
   {
-    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80',
-    title: 'How to Record a Video Podcast (Remotely) in 5 Steps',
-    tag: 'Video podcast',
-    date: 'Mar 21, 2024',
-    readTime: '14 min',
+    image: '/Images/three.png',
+    title: 'A Glimpse into Pratham’s Research Journey: Research Intern in ML',
+    tag: 'Read on Medium',
+    link: 'https://medium.com/@ug_anc/a-glimpse-into-prathams-research-journey-research-intern-in-ml-75a10e78de2c',
+    date: 'Nov 7, 2024',
+    readTime: '5 min',
   },
   {
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
-    title: 'How to Improve Zoom Video Quality (Full Guide)',
-    tag: 'Recording software',
-    date: 'Mar 5, 2024',
-    readTime: '10 min',
+    image: '/Images/four.png',
+    title: 'From IIT Kanpur to EPFL: A Semester of Growth and Discovery',
+    tag: 'Read on Medium',
+    link: 'https://medium.com/@ug_anc/from-iit-kanpur-to-epfl-a-semester-of-growth-and-discovery-741cd11bc51a',
+    date: 'Aug 12, 2024',
+    readTime: '11 min',
   },
 ];
 
 export default function Blogs() {
   return (
-    <section className={styles.blogsLayout}>
-      <div className={styles.featured}>
-        <FeaturedBlog data={featured} />
-      </div>
-      <div className={styles.trending}>
-        <h3 className={styles.trendingTitle}>Trending on IR Wing</h3>
-        {trending.map((blog, i) => (
-          <BlogCard key={i} data={blog} />
-        ))}
-      </div>
+    <section className={styles.blogsLayoutWrapper}>
+
+      {/* 🌐 Medium Collection Highlight */}
+      <a
+        href="https://medium.com/@ug_anc/list/international-relations-b27e2e46ddb7"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.mediumHighlight}
+      >
+        <div className={styles.mediumBadge}>M</div>
+
+        <div className={styles.mediumContent}>
+          <h3>International Relations @ IIT Kanpur</h3>
+          <p>
+            Read curated articles, global perspectives, and insights from the
+            International Relations Wing on Medium.
+          </p>
+          <span className={styles.mediumTag}>View Medium Collection</span>
+        </div>
+
+        <span className={styles.externalArrow}>↗</span>
+      </a>
+
+      {/* 📰 Existing Blog Layout */}
+      <section className={styles.blogsLayout}>
+        <div className={styles.featured}>
+          <FeaturedBlog data={featured} />
+        </div>
+
+        <div className={styles.trending}>
+          <h3 className={styles.trendingTitle}>Trending on IR Wing</h3>
+          {trending.map((blog, i) => (
+            <BlogCard key={i} data={blog} />
+          ))}
+        </div>
+      </section>
     </section>
   );
 }

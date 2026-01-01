@@ -9,7 +9,14 @@ export default function FeaturedBlog({ data }) {
       <p>{data.summary}</p>
       <div className={styles.meta}>
         <span>🧑 {data.author}</span>
-        <span className={styles.tag}>{data.tag}</span>
+        <a
+          href={data.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${styles.tag} ${styles.clickableTag}`}
+        >
+          {data.tag}
+        </a>
         <span>{data.date} · {data.readTime}</span>
       </div>
     </div>

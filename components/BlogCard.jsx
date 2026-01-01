@@ -10,7 +10,14 @@ export default function BlogCard({ data }) {
         <p className={styles.meta}>
           <span>{data.date}</span> · <span>{data.readTime}</span>
         </p>
-        <span className={styles.tag}>{data.tag}</span>
+        <a
+          href={data.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${styles.tag} ${styles.clickableTag}`}
+        >
+          {data.tag}
+        </a>
       </div>
     </div>
   );

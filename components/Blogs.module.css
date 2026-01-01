@@ -180,3 +180,97 @@
     padding: 0 1rem;
   }
 }
+
+
+/* Wrapper */
+.blogsLayoutWrapper {
+  max-width: 1280px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+/* 🌐 Medium Highlight Card */
+.mediumHighlight {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: linear-gradient(90deg, #ffffff, #f9fafb);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  border: 1.5px solid #e5e7eb;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.mediumHighlight:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+  border-color: #000000;
+}
+
+/* Medium Badge */
+.mediumBadge {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #000000;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Text Content */
+.mediumContent {
+  flex: 1;
+}
+
+.mediumContent h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.mediumContent p {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Tag */
+.mediumTag {
+  display: inline-block;
+  margin-top: 0.75rem;
+  background: #e0f2fe;
+  color: #075985;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* External Arrow */
+.externalArrow {
+  font-size: 1.5rem;
+  color: #6b7280;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .mediumHighlight {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .externalArrow {
+    display: none;
+  }
+}
